@@ -124,9 +124,16 @@ body {
    MOBILE PHONE LAYOUT (Responsive Design)
    ========================================= */
 @media (max-width: 900px) {
+    /* Allows the page to scroll if the phone screen is very small */
+    body {
+        overflow-y: auto; 
+    }
+
     .content-overlay {
-        flex-direction: column; /* Stacks items vertically */
-        padding: 120px 20px 40px 20px; /* Adds space at top for logo */
+        flex-direction: column;
+        padding: 100px 20px 40px 20px; /* Space for logo at the top */
+        min-height: 100vh;
+        justify-content: flex-start; /* Aligns content from the top down */
     }
 
     /* Centers the logo on mobile */
@@ -134,26 +141,44 @@ body {
         top: 20px;
         right: 50%;
         transform: translateX(50%);
-        max-width: 180px;
+        max-width: 150px;
     }
 
-    /* Centers the text and removes left padding */
+    /* Centers the text and fixes the sizing */
     .text-column {
         padding-left: 0;
         text-align: center;
+        margin-top: 20px;
         margin-bottom: 40px;
         align-items: center;
+        z-index: 20; 
     }
 
-    /* Centers the card */
+    /* Shrinks the huge desktop text so it fits on a phone screen */
+    .hero-text h1 {
+        font-size: 2.5rem; 
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.3); /* Helps it stand out on any background */
+    }
+
+    /* Centers the card and gives it a bottom margin so it doesn't cover the student */
     .card-column {
         justify-content: center;
         padding-right: 0;
-        z-index: 20;
+        z-index: 20; /* Ensures the card stays clickable above the student */
+        margin-bottom: 35vh; /* Creates empty space at the bottom for the student image */
     }
 
-    /* Hides the student image on small screens so they don't block the card */
+    /* Brings the student back and scales her for mobile! */
     .student-img {
-        display: none; 
+        display: block; /* Overrides the previous 'none' */
+        position: fixed; /* Keeps her anchored to the bottom of the screen */
+        bottom: 0;
+        left: 0;
+        width: 100%; /* Centers her using the full width of the phone */
+        height: 40vh; /* Restricts her to the bottom 40% of the screen */
+        object-fit: contain; 
+        object-position: bottom center; /* Anchors her feet to the bottom middle */
+        z-index: 1; /* Places her behind the text and contact card */
+        opacity: 0.9; /* Slightly fades her so the contact card pops more */
     }
 }
