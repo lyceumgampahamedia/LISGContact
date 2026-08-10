@@ -1,0 +1,159 @@
+/* --- BASE RESET --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #1abced; /* Fallback color */
+}
+
+/* --- YOUR IMAGE LAYERS --- */
+
+/* The Background Image */
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the BG fills the screen without stretching */
+    z-index: 1;
+}
+
+/* The Logo */
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    max-width: 250px; /* Adjust this to make your logo bigger/smaller */
+    z-index: 100;
+	
+	/* ADD THESE TWO LINES */
+    transition: transform 0.1s ease-out; /* Creates a smooth easing effect */
+    will-change: transform; /* Optimizes performance for motion */
+}
+
+/* The Student */
+.student-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 95vh; /* Anchors the student to the bottom and scales to screen height */
+    object-fit: contain;
+    z-index: 5;
+}
+
+/* --- TEXT & CARD LAYOUT --- */
+.content-overlay {
+    position: relative;
+    z-index: 10; /* Keeps text and card above the images */
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+}
+
+/* Pushes the text slightly right so it doesn't cover the student's face */
+.text-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40%; 
+	margin-top: -500px;
+}
+
+.hero-text {
+    color: #ffffff;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* Aligns the card to the right side */
+.card-column {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+}
+
+/* --- CARD & BUTTON STYLES --- */
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 { color: #1a365d; font-size: 1.5rem; margin-bottom: 5px; }
+.card p { color: #666; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.4; }
+
+.button-group { display: flex; flex-direction: column; gap: 12px; }
+
+.btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; padding: 12px; border-radius: 8px; text-decoration: none;
+    font-weight: 600; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+.btn-dark { background-color: #1a365d; color: #ffffff; }
+.btn-light { background-color: #ffffff; color: #1a365d; border: 1px solid #e0e0e0; }
+
+/* =========================================
+   MOBILE PHONE LAYOUT (Responsive Design)
+   ========================================= */
+@media (max-width: 900px) {
+    .content-overlay {
+        flex-direction: column; /* Stacks items vertically */
+        padding: 120px 20px 40px 20px; /* Adds space at top for logo */
+    }
+
+    /* Centers the logo on mobile */
+    .logo {
+        top: 20px;
+        right: 50%;
+        transform: translateX(50%);
+        max-width: 180px;
+    }
+
+    /* Centers the text and removes left padding */
+    .text-column {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    /* Centers the card */
+    .card-column {
+        justify-content: center;
+        padding-right: 0;
+        z-index: 20;
+    }
+
+    /* Hides the student image on small screens so they don't block the card */
+    .student-img {
+        display: none; 
+    }
+}
