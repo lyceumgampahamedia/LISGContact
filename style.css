@@ -182,3 +182,43 @@ body {
         opacity: 0.9; /* Slightly fades her so the contact card pops more */
     }
 }
+/* =========================================
+   AUTOMATIC DARK MODE (System Preference)
+   ========================================= */
+@media (prefers-color-scheme: dark) {
+    
+    /* 1. Darken the background image slightly so it isn't blinding */
+    .background-img {
+        filter: brightness(0.5); /* Drops the brightness to 50% */
+    }
+
+    /* 2. Change the Contact Card to dark gray */
+    .card {
+        background: #1e1e1e;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); /* Darker shadow */
+    }
+
+    /* 3. Make the card text light */
+    .card h2 {
+        color: #ffffff;
+    }
+    .card p {
+        color: #a0aec0; /* Soft light gray */
+    }
+
+    /* 4. Update the "Light" buttons to fit the dark theme */
+    .btn-light {
+        background-color: #2d3748; /* Dark gray */
+        color: #ffffff; /* White text */
+        border: 1px solid #4a5568; /* Subtle border */
+    }
+
+    .btn-light:hover {
+        background-color: #4a5568; /* Slightly lighter on hover */
+    }
+
+    /* 5. Tweak the "Dark" buttons to pop a bit more against the dark card */
+    .btn-dark {
+        background-color: #3182ce; /* A slightly brighter blue */
+    }
+}
