@@ -144,12 +144,12 @@ body {
     }
 
     /* Centers the text and fixes the sizing */
-    .text-column {
+	.text-column {
+        position: relative;
         padding-left: 0;
-        text-align: center;
-        margin-top: 20px;
+        text-align: left; /* Optional: left-aligning the text looks better when the image is on the right */
+        margin-top: 40px;
         margin-bottom: 40px;
-        align-items: center;
         z-index: 20; 
     }
 
@@ -168,17 +168,17 @@ body {
     }
 
     /* Brings the student back and scales her for mobile! */
-    .student-img {
-        display: block; /* Overrides the previous 'none' */
-        position: fixed; /* Keeps her anchored to the bottom of the screen */
-        bottom: 0;
-        left: 0;
-        width: 100%; /* Centers her using the full width of the phone */
-        height: 40vh; /* Restricts her to the bottom 40% of the screen */
+	.student-img {
+        display: block; 
+        position: absolute; /* Anchors her to the top of the page, not the screen */
+        top: 130px; /* Adjust this number to move her slightly higher or lower near the text */
+        right: -10%; /* Pushes her slightly off the right edge of the screen */
+        left: auto; /* Removes the previous left alignment */
+        width: 65%; /* Controls her size on the screen */
+        height: auto; 
         object-fit: contain; 
-        object-position: bottom center; /* Anchors her feet to the bottom middle */
-        z-index: 1; /* Places her behind the text and contact card */
-        opacity: 0.9; /* Slightly fades her so the contact card pops more */
+        z-index: 1; /* Places her behind the text */
+        opacity: 0.8; /* Slight fade so the text overlapping her is still readable */
     }
 }
 /* =========================================
