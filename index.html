@@ -11,14 +11,20 @@
 </head>
 <body>
     
-    <!-- 1. YOUR BACKGROUND IMAGE -->
-    <!-- Add your blue brush stroke background link here -->
-    <img src="WebBG.jpg" class="background-img" alt="Background">
+<picture>
+        <!-- This loads ONLY if the device is in Dark Mode -->
+        <source srcset="YOUR_DARK_BG_IMAGE.jpg" media="(prefers-color-scheme: dark)">
+        <!-- This is the default Light Mode image -->
+        <img src="BG.jpg" class="background-img" alt="Background">
+    </picture>
 
-	<!-- 2. YOUR LOGO -->
-    <!-- Replace the href link with the website you want to send them to -->
-    <a href="https://www.lyceum.lk/branches/gampaha/" class="logo" target="_blank">
-        <img src="Logo.png" alt="School Logo" style="width: 100%; height: auto; display: block;">
+<a href="https://www.lyceum.lk/branches/gampaha/" class="logo" target="_blank">
+        <picture>
+            <!-- This loads ONLY if the device is in Dark Mode -->
+            <source srcset="YOUR_DARK_LOGO_IMAGE.png" media="(prefers-color-scheme: dark)">
+            <!-- This is the default Light Mode logo -->
+            <img src="Logo.png" alt="School Logo" style="width: 100%; height: auto; display: block;">
+        </picture>
     </a>
 
     <!-- 3. YOUR STUDENT IMAGE -->
