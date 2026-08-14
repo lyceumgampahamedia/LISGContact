@@ -3,80 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enroll Today</title>
+    <meta name="theme-color" content="#103f73">
+    <meta name="description" content="Enroll at Lyceum International School Gampaha and begin your child's journey with care, curiosity and confidence.">
+    <title>Enroll Today | Lyceum Gampaha</title>
     <link rel="icon" type="image/png" href="TLogo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
-<picture>
-
-        <source srcset="WebBGD-01.jpg" media="(prefers-color-scheme: dark)">
-
-        <img src="WebBG.jpg" class="background-img" alt="Background">
-    </picture>
-
-<a href="https://www.lyceum.lk/branches/gampaha/" class="logo" target="_blank">
-        <picture>
-
-            <source srcset="Logo-01.png" media="(prefers-color-scheme: dark)">
-
-            <img src="Logo.png" alt="School Logo" style="width: 100%; height: auto; display: block;">
+    <div class="site-shell">
+        <picture class="background-wrap" aria-hidden="true">
+            <source srcset="WebBGD-01.jpg" media="(prefers-color-scheme: dark)">
+            <img src="WebBG.jpg" class="background-img" alt="">
         </picture>
-    </a>
 
-    <img src="Student.png" class="student-img" alt="Student">
+        <div class="ambient ambient-one" aria-hidden="true"></div>
+        <div class="ambient ambient-two" aria-hidden="true"></div>
+        <div class="page-vignette" aria-hidden="true"></div>
 
-    <div class="content-overlay">
-        
-        <div class="text-column">
-            <div class="hero-text">
-                <h1>Enroll your<br>child today</h1>
-                <p>A place to discover their strengths,<br>build lasting friendships, and grow<br>into tomorrow's brightest possibilities.</p>
-            </div>
-        </div>
+        <header class="topbar">
+            <a href="https://www.lyceum.lk/branches/gampaha/" class="logo" target="_blank" rel="noopener" aria-label="Visit Lyceum International School Gampaha website">
+                <picture>
+                    <source srcset="Logo-01.png" media="(prefers-color-scheme: dark)">
+                    <img src="Logo.png" alt="Lyceum International School Gampaha">
+                </picture>
+            </a>
 
-        <div class="card-column">
-            <div class="card">
-                <h2>Contact Us</h2>
-                <p>Begin your child's journey with care, curiosity, and confidence.</p>
-                
-                <div class="button-group">
-                    <a href="tel:0334674543" class="btn btn-dark"><i class="fas fa-phone-alt"></i> 033 4 674 543</a>
-                    <a href="tel:0334928842" class="btn btn-dark"><i class="fas fa-phone-alt"></i> 033 4 928 842</a>
-                    <a href="mailto:lyceum_lg@lyceum.lk" class="btn btn-dark"><i class="fas fa-envelope"></i> Email us</a>
-                    
-                    <a href="https://maps.app.goo.gl/HtLezLHiW8Vv1WNRA" target="_blank" class="btn btn-light"><i class="fas fa-map-marker-alt"></i> Location</a>
-                    <a href="https://www.facebook.com/profile.php?id=100064155962647" target="_blank" class="btn btn-light"><i class="fab fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.instagram.com/lyceumgampaha/" target="_blank" class="btn btn-light"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="https://www.youtube.com/@LyceumGampaha" target="_blank" class="btn btn-light"><i class="fab fa-youtube"></i> YouTube</a>
+            <a class="top-cta" href="tel:0334674543">
+                <span class="top-cta-icon"><i class="fas fa-phone-alt"></i></span>
+                <span>
+                    <small>Admissions</small>
+                    <strong>Call us today</strong>
+                </span>
+            </a>
+        </header>
+
+        <main class="hero">
+            <img src="Student.png" class="student-img" alt="Lyceum student" id="studentImage">
+
+            <section class="hero-copy" aria-labelledby="hero-title">
+                <div class="eyebrow"><span></span> Admissions now open</div>
+                <h1 id="hero-title">A brighter future<br><em>starts here.</em></h1>
+                <p>Give your child a place to discover their strengths, build lasting friendships and grow with confidence.</p>
+
+                <div class="hero-actions">
+                    <a href="tel:0334674543" class="primary-action">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Speak to admissions</span>
+                    </a>
+                    <a href="https://www.lyceum.lk/branches/gampaha/" class="text-action" target="_blank" rel="noopener">
+                        Explore Lyceum Gampaha <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-            </div>
-        </div>
-        
+
+                <div class="trust-row" aria-label="School values">
+                    <div><i class="fas fa-heart"></i><span>Care</span></div>
+                    <div><i class="fas fa-lightbulb"></i><span>Curiosity</span></div>
+                    <div><i class="fas fa-star"></i><span>Confidence</span></div>
+                </div>
+            </section>
+
+            <aside class="contact-card" aria-labelledby="contact-title">
+                <div class="card-glow" aria-hidden="true"></div>
+                <div class="card-heading">
+                    <div>
+                        <span class="card-kicker">Start the conversation</span>
+                        <h2 id="contact-title">Contact Us</h2>
+                    </div>
+                    <div class="card-icon"><i class="fas fa-paper-plane"></i></div>
+                </div>
+
+                <p class="card-intro">Our team is ready to help you take the next step in your child's journey.</p>
+
+                <div class="contact-list">
+                    <a href="tel:0334674543" class="contact-link featured">
+                        <span class="icon-box"><i class="fas fa-phone-alt"></i></span>
+                        <span class="contact-copy"><small>Call</small><strong>033 4 674 543</strong></span>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </a>
+                    <a href="tel:0334928842" class="contact-link">
+                        <span class="icon-box"><i class="fas fa-phone-alt"></i></span>
+                        <span class="contact-copy"><small>Alternate line</small><strong>033 4 928 842</strong></span>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </a>
+                    <a href="mailto:lyceum_lg@lyceum.lk" class="contact-link">
+                        <span class="icon-box"><i class="fas fa-envelope"></i></span>
+                        <span class="contact-copy"><small>Email</small><strong>lyceum_lg@lyceum.lk</strong></span>
+                        <i class="fas fa-chevron-right arrow"></i>
+                    </a>
+                    <a href="https://maps.app.goo.gl/HtLezLHiW8Vv1WNRA" target="_blank" rel="noopener" class="contact-link">
+                        <span class="icon-box"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="contact-copy"><small>Visit us</small><strong>Get directions</strong></span>
+                        <i class="fas fa-arrow-up-right-from-square arrow"></i>
+                    </a>
+                </div>
+
+                <div class="social-row" aria-label="Social media links">
+                    <span>Follow us</span>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100064155962647" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/lyceumgampaha/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@LyceumGampaha" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span></div>
     </div>
+
     <script>
-        const student = document.querySelector('.student-img');
+        const student = document.getElementById('studentImage');
+        const card = document.querySelector('.contact-card');
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        window.addEventListener('mousemove', (e) => {
+        if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+            window.addEventListener('mousemove', (event) => {
+                const x = (event.clientX / window.innerWidth - 0.5);
+                const y = (event.clientY / window.innerHeight - 0.5);
 
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 40;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 40;
-            
-            student.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
-        });
-
-        window.addEventListener('deviceorientation', (e) => {
-
-            const xAxis = e.gamma ? e.gamma / 2 : 0; 
-            
-            const yAxis = e.beta ? (e.beta - 45) / 2 : 0; 
-            
-            student.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
-        });
+                student.style.setProperty('--move-x', `${x * -14}px`);
+                student.style.setProperty('--move-y', `${y * -8}px`);
+                card.style.setProperty('--card-x', `${x * -3}deg`);
+                card.style.setProperty('--card-y', `${y * 2}deg`);
+            });
+        }
     </script>
-</body>
-</html>
 </body>
 </html>
